@@ -1,0 +1,28 @@
+﻿@model IEnumerable<GatitosWebApp.Models.Gatito>
+
+<h1>Gatitos</h1>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Raza</th>
+        <th>Imagen</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var gatito in Model)
+    {
+        <tr>
+            <td>@gatito.Nombre</td>
+            <td>@gatito.Raza</td>
+            <td><img src="@gatito.ImagenUrl" alt="@gatito.Nombre" style="width: 100px; height: auto;" /></td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@gatito.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@gatito.Id">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@gatito.Id">Eliminar</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a asp-action="Create">Agregar nuevo gatito</a>
+

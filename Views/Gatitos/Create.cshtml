@@ -1,0 +1,20 @@
+﻿@model GatitosWebApp.Models.Gatito
+
+<h1>Agregar nuevo gatito</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+    </div>
+    <div>
+        <label asp-for="Raza"></label>
+        <input asp-for="Raza" />
+    </div>
+    <div>
+        <label asp-for="ImagenUrl"></label>
+        <input asp-for="ImagenUrl" />
+    </div>
+    <button type="submit">Agregar</button>
+</form>
+
